@@ -1,0 +1,234 @@
+/* Variables */
+:root {
+	/* Text */
+	--very-dark-desaturated-blue: hsl(238, 29%, 16%);
+	--soft-red: hsl(14, 88%, 65%);
+	--dark-desaturated-blue: hsl(237, 11.8%, 33.3%);
+	--very-dark-grayish-blue: hsl(237, 12%, 33%);
+	--dark-grayish-blue: hsl(240, 6%, 50%);
+	/* Gradient */
+	--soft-violet: hsl(273, 75%, 66%);
+	--soft-blue: hsl(240, 73%, 65%);
+	/* Card */
+	--white: #fff;
+	/* Dividers */
+	--light-grayish-blue: hsl(240, 5%, 91%);
+	/* Shadow */
+	--image-shadow-color: rgba(104, 98, 230, 12%);
+}
+
+/* Resets */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Convert font sizes */
+
+html {
+	font-size: 62.5%;
+}
+
+/* general styles */
+body {
+	background: linear-gradient(
+		180deg,
+		var(--soft-violet) 0%,
+		var(--soft-blue) 100%
+	);
+	font-family: 'kumbh Sans', sans-serif;
+	line-height: 1.6;
+}
+
+.wrapper {
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+	/* Fixes overflow problem with 100vw */
+	max-width: 100%;
+	place-items: center;
+}
+
+/* Typography */
+
+.headline {
+	font-size: 3.2rem;
+	text-align: center;
+}
+
+.sm-txt {
+	font-size: 1.2rem;
+}
+
+.md-txt {
+	font-size: 1.3rem;
+}
+
+/* Card Component */
+
+.card {
+	background: var(--white);
+	border-radius: 1.6em;
+	box-shadow: 0 0.4em 0.8em 0 rgba(0, 0, 0, 0.2),
+		0 0.6em 2em 0 rgba(0, 0, 0, 0.19);
+	min-height: 53.5em;
+	width: 32.7em;
+}
+
+.image-container {
+	height: 11em;
+}
+
+.header-image {
+	bottom: 11em;
+	filter: drop-shadow(0 2.5em var(--image-shadow-color));
+	left: 5%;
+	position: relative;
+}
+
+.header-image-desktop,
+.box-image-desktop {
+	display: none;
+}
+
+/* Togglable section code. */
+
+.collapsible-container {
+	margin: 1.5em auto 0 auto;
+	width: 85%;
+}
+
+/* hide actual checkbox */
+.toggle[type='checkbox'] {
+	display: none;
+}
+
+/* Toggle styling */
+
+.lbl-toggle {
+	color: var(--dark-desaturated-blue);
+	cursor: pointer;
+	display: flex;
+	padding: 1em 0.1em;
+}
+
+.lbl-toggle:hover {
+	color: var(--soft-red);
+}
+
+.lbl-toggle::after {
+	content: url('../images/icon-arrow-down.svg');
+	margin-left: auto;
+}
+
+/* Style inner */
+.content-inner {
+	color: var(--dark-grayish-blue);
+	padding-bottom: 1.2em;
+	width: 90%;
+}
+
+/* Toggle Functinality */
+
+/* hide content initially. */
+.collapsible-content {
+	border-bottom: 0.15em solid var(--light-grayish-blue);
+	max-height: 0px;
+	overflow: hidden;
+	transition: max-height 0.25s ease-out;
+}
+
+/* When toggle is checked apply styles to siblings(look up selector) */
+.toggle:checked + .lbl-toggle + .collapsible-content {
+	max-height: 100vh;
+	transition: max-height 1s ease-out;
+}
+
+.toggle:checked + .lbl-toggle {
+	color: var(--very-dark-desaturated-blue);
+	font-weight: 700;
+}
+
+/* Animate toggle arrow */
+.toggle:checked + .lbl-toggle::after {
+	transform: rotateX(180deg);
+	transition: transform 0.5s;
+}
+
+.toggle:not(:checked) + .lbl-toggle::after {
+	transform: rotateX(0deg);
+	transition: transform 0.5s;
+}
+
+/* Media Queries */
+
+@media (min-width: 57.5em) {
+	.card {
+		background: #fff url(../images/bg-pattern-desktop.svg) no-repeat left -570px
+			bottom -120px;
+		display: flex;
+		flex-direction: row;
+		width: 92em;
+		overflow: hidden;
+	}
+
+	.md-txt {
+		font-size: 1.4rem;
+	}
+
+	.header-image {
+		display: none;
+	}
+
+	.header-image-desktop {
+		display: block;
+		position: relative;
+		right: 8em;
+		top: 8em;
+	}
+
+	.box-container {
+		position: absolute;
+	}
+
+	.box-image-desktop {
+		bottom: 14.5em;
+		display: block;
+		position: relative;
+		right: 9.4em;
+	}
+
+	.content {
+		align-self: center;
+	}
+
+	.headline {
+		text-align: start;
+		padding-bottom: 1.5em;
+	}
+
+	.collapsible-container {
+		margin: 0;
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+
+.lbl-toggle:hover {
+	color: var(--soft-red);
+}
+
+.lbl-toggle::after {
+	content: url('../images/icon-arrow-down.svg');
+	margin-left: auto;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/style.css" />
+		<title>Frontend Mentor | FAQ Accordion Card</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="card">
+				<div class="image-container">
+					<img
+						class="header-image"
+						src="./images/illustration-woman-online-mobile.svg"
+						alt=""
+					/>
+					<img
+						class="header-image-desktop"
+						src="./images/illustration-woman-online-desktop.svg"
+						alt=""
+					/>
+					<div class="box-container">
+						<img
+							class="box-image-desktop"
+							src="/images/illustration-box-desktop.svg"
+							alt=""
+						/>
+					</div>
+				</div>
+
+				<div class="content">
+					<h1 class="headline">FAQ</h1>
+
+					<div class="collapsible-container">
+						<input id="collapsible" class="toggle" type="checkbox" />
+						<label for="collapsible" class="lbl-toggle md-txt"
+							>How many team members can I invite?</label
+						>
+						<div class="collapsible-content">
+							<div class="content-inner">
+								<p class="sm-txt">
+									You can invite up to 2 additional users on the Free plan. here
+									is no limit on team members for the Premium plan.
+								</p>
+							</div>
+						</div>
+
+						<input id="collapsible2" class="toggle" type="checkbox" />
+						<label for="collapsible2" class="lbl-toggle md-txt"
+							>What is the maximum file upload size?</label
+						>
+						<div class="collapsible-content">
+							<div class="content-inner">
+								<p class="sm-txt">
+									No more than 2GB. All files in your account must fit your
+									allotted storage space.
+								</p>
+							</div>
+						</div>
+
+						<input id="collapsible3" class="toggle" type="checkbox" />
+						<label for="collapsible3" class="lbl-toggle md-txt"
+							>How do I reset my password?</label
+						>
+						<div class="collapsible-content">
+							<div class="content-inner">
+								<p class="sm-txt">
+									Click “Forgot password” from the login page or “Change
+									password” from your profile page. A reset link will be emailed
+									to you.
+								</p>
+							</div>
+						</div>
+
+						<input id="collapsible4" class="toggle" type="checkbox" />
+						<label for="collapsible4" class="lbl-toggle md-txt"
+							>Can I cancel my subscription?</label
+						>
+						<div class="collapsible-content">
+							<div class="content-inner">
+								<p class="sm-txt">
+									Yes! Send us a message and we’ll process your request no
+									questions asked.
+								</p>
+							</div>
+						</div>
+
+						<input id="collapsible5" class="toggle" type="checkbox" />
+						<label for="collapsible5" class="lbl-toggle md-txt"
+							>Do you provide additional support?</label
+						>
+						<div class="collapsible-content">
+							<div class="content-inner">
+								<p class="sm-txt">
+									Chat and email support is available 24/7. Phone lines are open
+									during normal business hours.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Tejaswini</a>.
+		</div>
+	</body>
+</html>
+
